@@ -14,7 +14,7 @@
 
 ## Установка
 
-1. Установите расширение для управления пользовательскими скриптами, например, [Tampermonkey](https://www.tampermonkey.net/) (рекомендуется) или [Violentmonkey](https://violentmonkey.github.io/get-it/).
+1. Установите расширение для управления пользовательскими скриптами, например, [Tampermonkey](https://www.tampermonkey.net/) или [Violentmonkey](https://violentmonkey.github.io/get-it/).
 2. Перейдите по [этой ссылке](https://raw.githubusercontent.com/ilfae/BestChange-Filter/refs/heads/main/README.md).
 3. Tampermonkey/Violentmonkey предложит установить скрипт. Подтвердите установку.
 
