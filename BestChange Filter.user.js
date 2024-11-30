@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        BestChange Filter
-// @version     1.2
+// @version     1.3
 // @namespace    KittenWoof
 // @match       https://www.bestchange.ru/*
 // @grant       none
@@ -27,6 +27,8 @@ filterMenu.innerHTML = `
 
 document.body.appendChild(filterMenu);
 
+const maxInput = document.getElementById("filterMax");
+let max = Infinity;
 let filterInterval;
 
 function filterRows(max) {
@@ -43,24 +45,24 @@ function filterRows(max) {
 }
 
 document.getElementById("applyFilter").addEventListener("click", () => {
-    const max = parseInt(document.getElementById("filterMax").value, 10) || Infinity;
+    max = parseInt(maxInput.value, 10) || Infinity;
     filterRows(max);
 
-    if (!filterInterval) {
-        filterInterval = setInterval(() => {
-            filterRows(max);
-        }, 1000);
+    if (filterInterval) {
+        clearInterval(filterInterval);
     }
+
+    filterInterval = setInterval(() => {
+        max = parseInt(maxInput.value, 10) || Infinity;
+        filterRows(max);
+    }, 1000);
 });
 
 document.getElementById("resetFilter").addEventListener("click", () => {
-    document.querySelectorAll("tr").forEach(row => {
-        row.style.display = "";
-    });
-
-    document.getElementById("filterMax").value = '';
+    max = Infinity;
+    maxInput.value = '';
+    filterRows(max);
 
     clearInterval(filterInterval);
     filterInterval = null;
 });
-
