@@ -4,6 +4,8 @@
 // @namespace    KittenWoof
 // @match       https://www.bestchange.ru/*
 // @grant       none
+// @updateURL    https://github.com/ilfae/BestChange-Filter/raw/refs/heads/main/BestChange%20Filter.user.js
+// @downloadURL  https://github.com/ilfae/BestChange-Filter/raw/refs/heads/main/BestChange%20Filter.user.js
 // @icon         https://www.bestchange.ru/favicon.ico
 // ==/UserScript==
 
