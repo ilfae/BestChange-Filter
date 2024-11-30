@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        BestChange Filter
-// @version     1.0
+// @version     1.1
 // @namespace    KittenWoof
 // @match       https://www.bestchange.ru/*
 // @grant       none
