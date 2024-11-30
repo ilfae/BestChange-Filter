@@ -55,7 +55,7 @@ document.getElementById("applyFilter").addEventListener("click", () => {
     filterInterval = setInterval(() => {
         max = parseInt(maxInput.value, 10) || Infinity;
         filterRows(max);
-    }, 1000);
+    }, 700);
 });
 
 document.getElementById("resetFilter").addEventListener("click", () => {
